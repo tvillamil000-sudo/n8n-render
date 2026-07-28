@@ -7,6 +7,16 @@ services:
     image:
       url: docker.io/n8nio/n8n:latest
     envVars:
+      - key: WEBHOOK_URL
+        value: https://n8n-service-t2n4.onrender.com/
+      - key: N8N_EDITOR_BASE_URL
+        value: https://n8n-service-t2n4.onrender.com/
+      - key: N8N_PROXY_HOPS
+        value: 1
+      - key: GENERIC_TIMEZONE
+        value: Asia/Manila
+      - key: TZ
+        value: Asia/Manila
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
       - key: NODE_OPTIONS
