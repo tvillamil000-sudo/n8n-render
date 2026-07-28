@@ -41,7 +41,3 @@ services:
         value: true      
       - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
         value: false
-
-databases:
-  - name: n8n-db
-    plan: free
