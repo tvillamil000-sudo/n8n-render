@@ -28,7 +28,9 @@ services:
       - key: DB_POSTGRESDB_USER
         value: postgres.yrfqnhizntmateqwbvnp
       - key: DB_POSTGRESDB_SSL_ENABLED
-        value: true
+        value: true      
+      - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
+        value: false
 
 databases:
   - name: n8n-db
