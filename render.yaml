@@ -18,21 +18,29 @@ services:
       - key: DB_TYPE
         value: postgresdb
       - key: DB_POSTGRESDB_DATABASE
+        value: postgres
         fromDatabase:
           name: n8n-db
           property: database
       - key: DB_POSTGRESDB_HOST
+        value: aws-0-ap-northeast-1.pooler.supabase.com
+      - key: DB_POSTGRESDB_PORT
+        value: 5432
         fromDatabase:
           name: n8n-db
           property: host
       - key: DB_POSTGRESDB_PASSWORD
+        sync: false
         fromDatabase:
           name: n8n-db
           property: password
       - key: DB_POSTGRESDB_USER
+        value: postgres.yrfqnhizntmateqwbvnp
         fromDatabase:
           name: n8n-db
           property: user
+      - key: DB_POSTGRESDB_SSL_ENABLED
+        value: true
 
 databases:
   - name: n8n-db
